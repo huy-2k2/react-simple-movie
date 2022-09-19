@@ -1,9 +1,7 @@
 import { Fragment } from "react";
 import { Routes, Route } from "react-router-dom";
-import Banner from "./components/banner/Banner";
 
 import "swiper/css";
-import Header from "./components/layouts/Header";
 import HomePage from "./pages/HomePage";
 import Main from "./components/layouts/Main";
 import MoviesPage from "./pages/MoviesPage";
