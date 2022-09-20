@@ -5,6 +5,7 @@ import { genreFilms } from "../../assets/data";
 import { createApiByType, createImageUrl } from "../../helps";
 import { useNavigate } from "react-router-dom";
 import Button from "../button/Button";
+import ButtonBackDrop from "../button/ButtonBackDrop";
 const BannerItem = ({
   original_title,
   poster_path,
@@ -42,9 +43,21 @@ const BannerItem = ({
           <Button className="w-auto" onClick={() => navigate(`/movies/${id}`)}>
             Watch now
           </Button>
-          <button className=" w-14 text-[36px] leading-4 text-white bg-white rounded-md bg-opacity-20 backdrop-blur-[2px]">
+          {/* <button className=" w-14 text-[36px] leading-4 text-white bg-white rounded-md bg-opacity-20 backdrop-blur-[2px]">
             +
-          </button>
+          </button> */}
+          <ButtonBackDrop
+            data={{
+              original_title,
+              poster_path,
+              backdrop_path,
+              genre_ids,
+              id,
+            }}
+            className="w-14 text-[36px]"
+          >
+            +
+          </ButtonBackDrop>
         </div>
       </div>
     </div>

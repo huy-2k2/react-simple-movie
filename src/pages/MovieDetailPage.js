@@ -25,7 +25,6 @@ const SimilarMovie = ({ movieId }) => {
 
 const MovieVideo = ({ movieId }) => {
   const { data, error } = useSWR(createApiVideo(movieId), fetcher);
-  console.log(data);
   return (
     <div className="flex flex-col gap-10 py-10">
       {data?.results?.slice(0, 2).map((item) => (

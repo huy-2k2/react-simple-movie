@@ -19,6 +19,27 @@
     @apply mx-auto;
   }
 
+  .movie-list {
+    position: relative;
+  }
+
+  .movie-list .swiper {
+    position: unset;
+  }
+
+  .movie-list .swiper-button-prev,
+  .movie-list .swiper-button-next {
+    top: 0;
+    right: 0;
+    left: unset;
+    transform: scale(0.6) translateY(50%);
+    @apply text-primary;
+  }
+
+  .movie-list .swiper-button-prev {
+    right: 50px;
+  }
+
   .movie-list .swiper-slide,
   .cast-list .swiper-slide {
     width: 300px;

@@ -1,7 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useFavorite } from "../../contexts/favoriteContext";
 import { createImageUrl } from "../../helps";
 import Button from "../button/Button";
+import ButtonBackDrop from "../button/ButtonBackDrop";
 
 const MovieCardSkeleton = () => {
   return (
@@ -48,9 +50,19 @@ export default function MovieCard({
             src={createImageUrl(poster_path || backdrop_path, "w500")}
             alt=""
           />
-          <button className="absolute p-2 text-3xl leading-4 text-white bg-white rounded-md bg-opacity-40 backdrop-blur-[2px] top-2 right-2">
+          <ButtonBackDrop
+            className={`absolute p-3 top-2 right-2`}
+            data={{
+              release_date,
+              original_title,
+              poster_path,
+              backdrop_path,
+              vote_average,
+              id,
+            }}
+          >
             +
-          </button>
+          </ButtonBackDrop>
         </div>
         <h3 className="mb-5 text-xl font-bold line-clamp-2">
           {original_title}
