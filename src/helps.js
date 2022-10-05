@@ -19,7 +19,7 @@ const createApiSimilarMovie = (id) =>
   `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${API_KEY}&language=en-US&page=1`;
 
 const createApiSearchMovie = (query, page = 1) =>
-  `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&language=en-US&page=${page}&include_adult=true`;
+  `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&language=en-US&page=${page}&include_adult=false`;
 
 export {
   createApiByType,
